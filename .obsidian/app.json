@@ -1,0 +1,12 @@
+{
+  "legacyEditor": false,
+  "livePreview": false,
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "tmpadd",
+  "showLineNumber": true,
+  "defaultViewMode": "source",
+  "showFrontmatter": false,
+  "vimMode": false,
+  "tabSize": 4
+}

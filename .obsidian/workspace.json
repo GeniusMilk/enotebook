@@ -1,0 +1,149 @@
+{
+  "main": {
+    "id": "c5f36c8a75536837",
+    "type": "split",
+    "children": [
+      {
+        "id": "f0df89e80c60e01c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c1213fbbb4b4a148",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0680e08d07b135e9",
+    "type": "split",
+    "children": [
+      {
+        "id": "23556bd0533f5385",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "91ff5ddc2f3ad8cc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b5457e6278d3a4be",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "#TODO",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5cb60cf1531e9079",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 396.5021228790283,
+    "collapsed": true
+  },
+  "right": {
+    "id": "b456815cea168dea",
+    "type": "split",
+    "children": [
+      {
+        "id": "ed63d8ca4dddeda8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ac1722b6551a0582",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "byModifiedTime",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "de4fef6269b84b8d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "7b19e87b1f0922f2",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "templater-obsidian:Templater": false,
+      "flashcards-obsidian:Generate flashcards": false,
+      "obsidian-spaced-repetition:复习卡片": false,
+      "obsidian-leaflet-plugin:Open Leaflet Map": false,
+      "obsidian-map-view:Open map view": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:Create new canvas": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false
+    }
+  },
+  "active": "c1213fbbb4b4a148",
+  "lastOpenFiles": [
+    "读书笔记/社会学学习/想象的共同体（增订版）/想象的共同体（增订版）/读书笔记--社会学学习--《想象的共同体（增订版）》.md",
+    "读书笔记/社会学学习/狂热分子/笔记/读书笔记--社会学学习--《狂热分子》.md",
+    "读书笔记/金融学习/读书笔记--金融学习--《千年金融史：金融如何塑造文明，从5000年前到21世纪》/笔记/读书笔记--金融学习--《千年金融史：金融如何塑造文明，从5000年前到21世纪》.md",
+    "Englishilearning/笔记/8 -script- = -scrib- = -scrip- 写，刻写-- N.md",
+    "Englishilearning/笔记/-vinc- = -vict- 胜，征服 -- N.md",
+    "Englishilearning/笔记/7 -vi- -via- 路 --N.md",
+    "Englishilearning/笔记/-bar- = -bal- = -ban- 长木条，障碍--N.md",
+    "Englishilearning/词根词缀/英语前缀.md",
+    "Englishilearning/笔记/9.-techn(o)- 技术，艺术-- N.md",
+    "Englishilearning/单词树/9.-techn(o)- 技术，艺术 --T.md"
+  ]
+}

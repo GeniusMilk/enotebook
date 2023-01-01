@@ -1,0 +1,111 @@
+{
+  "main": {
+    "id": "c25792885820e4ab",
+    "type": "split",
+    "children": [
+      {
+        "id": "a30048b246355669",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "金融学习/读书笔记--金融学习--《千年金融史：金融如何塑造文明，从5000年前到21世纪》/笔记/读书笔记--金融学习--《千年金融史：金融如何塑造文明，从5000年前到21世纪》.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e7c40eacb3dd72be",
+    "type": "split",
+    "children": [
+      {
+        "id": "205d47ec6da27269",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7b545715b753acb4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "5fccf2f9d5f445e8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#论点",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ac342974552ba080",
+    "type": "split",
+    "children": [
+      {
+        "id": "cd9502352fffebb1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "29d0157ab719b6e5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "金融学习/读书笔记--金融学习--《千年金融史：金融如何塑造文明，从5000年前到21世纪》/笔记/读书笔记--金融学习--《千年金融史：金融如何塑造文明，从5000年前到21世纪》.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f5204459e9210e48",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 100
+  },
+  "active": "a30048b246355669",
+  "lastOpenFiles": [
+    "历史学习/大分流/笔记/读书笔记--历史学习--《大分流》.md",
+    "金融学习/读书笔记--金融学习--《千年金融史：金融如何塑造文明，从5000年前到21世纪》/笔记/读书笔记--金融学习--《千年金融史：金融如何塑造文明，从5000年前到21世纪》.md",
+    "未命名 1.md",
+    "历史学习/剑桥中国史/笔记/读书笔记--历史学习--《剑桥中国史》.md",
+    "Templates/template.md",
+    "Templates/Card.md",
+    "Templates/未命名.md",
+    "未命名.md",
+    "Templates/未命名 1.md",
+    "Pasted image 20220801132837.jpg"
+  ]
+}

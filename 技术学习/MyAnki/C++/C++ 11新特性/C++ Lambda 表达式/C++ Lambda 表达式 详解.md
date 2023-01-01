@@ -1,0 +1,550 @@
+#LambdaCard 
+
+#参考链接 
+* [ C ++ Lambda表达式详解_奥修的灵魂的博客-CSDN博客_c++ lambda](https://blog.csdn.net/A1138474382/article/details/111149792#:~:text=1.Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%A6%82%E8%BF%B0.%20Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%98%AF%E7%8E%B0%E4%BB%A3C%2B%2B%E5%9C%A8C%20%2B%2B%2011%E5%92%8C%E6%9B%B4%E9%AB%98%E7%89%88%E6%9C%AC%E4%B8%AD%E7%9A%84%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E8%AF%AD%E6%B3%95%E7%B3%96,%EF%BC%8C%E5%9C%A8C%2B%2B11%E3%80%81C%2B%2B14%E3%80%81C%2B%2B17%E5%92%8CC%2B%2B20%E4%B8%ADLambda%E8%A1%A8%E8%BE%BE%E7%9A%84%E5%86%85%E5%AE%B9%E8%BF%98%E5%9C%A8%E4%B8%8D%E6%96%AD%E6%9B%B4%E6%96%B0%E3%80%82.%20lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E4%B9%9F%E7%A7%B0%E4%B8%BAlambda%E5%87%BD%E6%95%B0%EF%BC%89%E6%98%AF%E5%9C%A8%E8%B0%83%E7%94%A8%E6%88%96%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E7%9A%84%E4%BD%8D%E7%BD%AE%E5%A4%84%E5%AE%9A%E4%B9%89%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BE%BF%E6%8D%B7%E6%96%B9%E6%B3%95%E3%80%82.%20%E9%80%9A%E5%B8%B8%EF%BC%8Clambda%E7%94%A8%E4%BA%8E%E5%B0%81%E8%A3%85%E4%BC%A0%E9%80%92%E7%BB%99%E7%AE%97%E6%B3%95%E6%88%96%E5%BC%82%E6%AD%A5%E6%96%B9%E6%B3%95%E7%9A%84%E5%87%A0%E8%A1%8C%E4%BB%A3%E7%A0%81%20%E3%80%82.%20%E6%9C%AC%E6%96%87%E4%B8%BB%E8%A6%81%E4%BB%8B%E7%BB%8DLambda%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E3%80%82.)
+* [C++ 11  lambda 的效率_simonJSX的博客-CSDN博客_c++ lambda 性能](https://blog.csdn.net/u011392018/article/details/39028457)
+
+```ActivityHistory
+/
+```
+```toc 
+	style: bullet | number | inline (default: bullet) 
+	min_depth: number (default: 2) max_depth: number (default: 6) 
+	title: string (default: undefined) 
+	allow_inconsistent_headings: boolean (default: false) 
+	delimiter: string (default: |) 
+	varied_style: boolean (default: false) 
+```
+
+
+### 1. Lambda 表达式概述
+
+ Lambda表达式是现代C++在C ++ 11和更高版本中的一个新的语法糖 ，在C++11、C++14、C++17和C++20中Lambda表达的内容还在不断更新。 lambda表达式（也称为lambda函数）是==在调用或作为函数参数传递的位置处定义匿名函数对象的便捷方法。==通常，lambda用于封装传递给算法或异步方法的几行代码 。
+<!--SR:!2022-08-31,3,170-->
+
+### 2. Lambda 表达式定义
+
+#### 2.1 Lambda 表达式示例
+Lambda有很多叫法，有==Lambda表达式、Lambda函数、匿名函数==。 ISO C ++标准官网展示了一个简单的lambda 表示式实例:
+```c++
+#include <algorithm>
+#include <cmath>
+
+void abssort(float* x, unsigned n) {
+    std::sort(x, x + n,
+        // Lambda expression begins
+        [](float a, float b) {
+            return (std::abs(a) < std::abs(b));
+        } // end of lambda expression
+    );
+}
+
+```
+例中std\:\:sort函数第三个参数应该是传递一个排序规则的函数，但是这个实例中直接将排序函数的实d现写在应该传递函数的位置，省去了定义排序函数的过程，对于这种==不需要复用，且短小的函数，直接传递函数体可以增加代码的可读性==。
+<!--SR:!2022-09-25,28,250!2022-09-19,24,250-->
+
+####  2.2 Lambda表达式语法定义
+#线索 
+?
+捕获列表、参数列表、可变规则、异常说明、返回类型、lambda函数体
+ <center>
+	<img style="border-radius: 0.3125em;
+	 box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://img-blog.csdnimg.cn/img_convert/f86a9e30f7474aff10be27e4b51c6f64.png#pic_center"> 
+	 <br> 
+	 <div style="color:orange; border-bottom: 1px solid #d9d9d9; 
+	 display: inline-block;
+	 color: #999; 
+	 padding: 2px;">  Lambda 表达式语法定义 </div>
+<!--SR:!2022-09-05,7,189-->
+
+</center>
+```c++
+[ capture list ] ( parameters ) opt -> ret { body; };
+```
+
+##### 捕获列表
+在C ++规范中也称为==Lambda导入器==， 捕获列表总是出现在==Lambda函数的开始处。实际上==，==[]==是Lambda引出符。编译器根据该引出符判断接下来的代码是否是Lambda函数，捕获列表能够==捕捉上下文中的变量以供Lambda函数使用==。
+<!--SR:!2022-08-30,4,209!2022-09-14,17,229!2022-09-02,9,229!2022-09-03,8,209-->
+
+##### 参数列表
+与普通函数的参数列表一致。==如果不需要参数传递，则可以连同括号“()”一起省略==。
+<!--SR:!2022-09-08,11,209-->
+
+##### 可变规格
+mutable修饰符， 默认情况下Lambda函数==总是一个const函数==，mutable可以取消其常量性。在使用该修饰符时，==参数列表不可省略（即使参数为空）==。
+<!--SR:!2022-08-30,4,209!2022-09-08,11,209-->
+
+##### 异常说明
+用于Lamdba表达式内部函数抛出异常。
+
+##### 返回类型
+追踪返回类型形式声明函数的返回类型。我们可以在==不需要返回值的时候也可以连同符号”->”一起省略==。此外，在返回类型明确的情况下，也可以省略该部分，让编译器对返回类型进行推导。
+<!--SR:!2022-09-05,10,209-->
+
+##### Lambda函数体
+内容与普通函数一样，==不过除了可以使用参数之外，还可以使用所有捕获的变量==。
+<!--SR:!2022-09-08,11,209-->
+
+#### 2.3 Lambda  表达式参数详解
+
+##### 2.3.1 Lambda捕获列表
+​ Lambda表达式与普通函数最大的区别是，==除了可以使用参数以外，Lambda函数还可以通过捕获列表访问一些上下文中的数据。==
+具体地，捕捉列表描述了==上下文中哪些数据可以被Lambda使用，以及使用方式（以[[|值传递]]的方式或[[|引用传递]]的方式）。==
+语法上，==在“[]”包括起来的是捕获列表，捕获列表由多个捕获项组成，并以逗号分隔。==捕获列表有以下几种形式：
+<!--SR:!2022-09-20,25,250!2022-08-30,4,209!2022-09-07,10,189-->
+
+###### 2.3.1.1 []表示不捕获任何变量
+?
+```c++
+auto function = ([]{
+		std::cout << "Hello World!" << std::endl;
+	}
+);
+
+function();
+```
+<!--SR:!2022-09-08,11,209-->
+
+###### 2.3.1.2 [var]表示值传递方式捕获变量var
+?
+```c++
+int num = 100;
+auto function = ([num]{
+		std::cout << num << std::endl;
+	}
+);
+
+function();
+```
+<!--SR:!2022-09-07,10,189-->
+
+###### 2.3.1.3 [=]表示 值传递方式捕获所有父作用域的变量（包括this）
+？
+```c++
+int index = 1;
+int num = 100;
+auto function = ([=]{
+			std::cout << "index: "<< index << ", " 
+                << "num: "<< num << std::endl;
+	}
+);
+
+function();
+
+```
+
+###### 2.3.1.4 [&var]表示引用传递捕捉变量var
+?
+```c++
+int num = 100;
+auto function = ([&num]{
+		num = 1000;
+		std::cout << "num: " << num << std::endl;
+	}
+);
+
+function();
+
+```
+<!--SR:!2022-09-02,9,229-->
+
+###### 2.3.1.5 [&]表示引用传递方式捕捉所有父作用域的变量（包括this）
+?
+```c++
+int index = 1;
+int num = 100;
+auto function = ([&]{
+		num = 1000;
+		index = 2;
+		std::cout << "index: "<< index << ", " 
+            << "num: "<< num << std::endl;
+	}
+);
+
+function();
+
+```
+<!--SR:!2022-09-03,13,249-->
+
+###### 2.3.1.6 [this]表示值传递方式捕捉当前的this指针
+?
+```c++
+#include <iostream>
+using namespace std;
+ 
+class Lambda
+{
+public:
+    void sayHello() {
+        std::cout << "Hello" << std::endl;
+    };
+
+    void lambda() {
+        auto function = [this]{ 
+            this->sayHello(); 
+        };
+
+        function();
+    }
+};
+ 
+int main()
+{
+    Lambda demo;
+    demo.lambda();
+}
+
+
+```
+<!--SR:!2022-09-04,9,209-->
+
+###### 2.3.1.7 `[=, &]`  [[C++ Card#拷贝|拷贝]]、用引混合
+?
+[=,&a,&b] 表示以引用传递的方式捕捉变量a和b，以值传递方式捕捉其它所有变量。
+```c++
+int index = 1;
+int num = 100;
+auto function = ([=, &index, &num]{
+		num = 1000;
+		index = 2;
+		std::cout << "index: "<< index << ", " 
+            << "num: "<< num << std::endl;
+	}
+);
+
+function();
+
+
+```
+<!--SR:!2022-09-08,11,209-->
+
+###### 2.3.1.8  [&,a,this]表示以|值传递的方式捕捉变量a和this，引用传递方式捕捉其它所有变量。
+```c++
+//TODO
+
+```
+
+##### 2.3.2 Lambda参数列表
+​ 除了捕获列表之外，lambda还可以接受输入参数。==参数列表是可选的，并且在大多数方面类似于函数的参数列表==。
+```c++
+auto function = [] (int first, int second){
+    return first + second;
+};
+	
+function(100, 200);
+
+```
+<!--SR:!2022-09-01,8,229-->
+
+##### 2.3.3 可变规格mutable
+​ mutable修饰符， 默认情况下==Lambda函数总是一个[[C++ Card#（12） 在C 中const的用法（定义，用途）|const函数]]==，mutable可以==取消其常量性。在使用该修饰符时，参数列表不可省略（即使参数为空）。==
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int m = 0;
+   int n = 0;
+   [&, n] (int a) mutable { m = ++n + a; }(4);
+   cout << m << endl << n << endl;
+}
+
+```
+<!--SR:!2022-09-07,10,210!2022-09-07,10,210-->
+
+##### 2.3.4 异常说明
+==使用 throw() 异常规范来指示 lambda 表达式不会引发任何异常==。与普通函数一样，如果 lambda 表达式声明 C4297 异常规范且 lambda 体引发异常，Visual C++ 编译器将生成警告 throw()
+```c++
+int main() // C4297 expected 
+{ 
+ 	[]() throw() { throw 5; }(); 
+}
+
+```
+<!--SR:!2022-09-21,26,250-->
+
+##### 2.3.5 返回类型
+​ Lambda表达式的==返回类型会自动推导==。除非你指定了返回类型，否则不必使用关键字。返回型类似于通常的方法或函数的返回型部分。但是，返回类型必须在参数列表之后，并且必须在返回类型->之前包含类型关键字。
+* 如果lambda主体仅包含一个return语句或该表达式未返回值，则==可以省略Lambda表达式的return-type部分==。
+* 如果lambda主体包含一个return语句，则编译器将==从return表达式的类型中推断出return类型==。
+* 否则，编译器==将返回类型推导为void==。
+```c++
+auto x1 = [](int i){ return i; };
+```
+<!--SR:!2022-09-27,30,250!2022-09-26,29,250!2022-09-08,10,190!2022-09-04,7,230-->
+
+##### 2.3.6 Lambda函数体
+
+ Lambda 表达式的 Lambda 主体（标准语法中的[[|_复合语句_]]）可以包含普通方法或函数的主体可以包含的任何内容。普通函数和lambda表达式的主体都可以访问以下类型的变量：
+- ==捕获变量==
+- ==形参变量==
+- ==局部声明的变量==
+- 类数据成员，==当在类内声明`this`并被捕获时==
+- ==具有[[|静态存储]]持续时间的任何变量==，例如全局变量 
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int m = 0;
+   int n = 0;
+   [&, n] (int a) mutable { m = ++n + a; }(4);
+   cout << m << endl << n << endl;
+}
+
+```
+<!--SR:!2022-08-31,3,150!2022-09-08,11,223!2022-09-02,5,203!2022-09-01,4,183!2022-09-03,6,203-->
+
+### 3.Lambda表达式的优缺点
+
+#### 3.1 Lambda表达式的优点
+?
+-   可以直接在需要调用函数的位置定义短小精悍的函数，而不需要预先定义好函数    
+```c++   
+std::find_if(v.begin(), v.end(), [](int& item){return item > 2});
+```
+-   使用Lamdba表达式变得更加紧凑，结构层次更加明显、代码可读性更好
+<!--SR:!2022-08-31,3,189-->
+
+#### 3.2 Lambda表达式的缺点
+-   Lamdba表达式语法比较灵活，增加了阅读代码的难度
+-   对于函数复用无能为力
+
+### 4.Lambda表达式工作原理
+
+#### 4.1 Lambda表达式工作原理
+​ 编译器会把一个lambda表达式生成一个匿名类的匿名对象，并在类中重载函数调用运算符,实现了一个operator()方法。
+```c++
+auto print = []{cout << "Hello World!" << endl; };
+```
+​ 编译器会把上面这一句翻译为下面的代码:
+```c++
+class print_class
+{
+public:
+	void operator()(void) const
+	{
+		cout << "Hello World！" << endl;
+	}
+};
+//用构造的类创建对象，print此时就是一个函数对象
+auto print = print_class();
+
+```
+
+#### 4.2 C++仿函数
+
+​ 仿函数（functor）==又称为函数对象（function object）是一个能行使函数功能的类。==
+仿函数的语法几乎和我们普通的函数调用一样，不过作为仿函数的类，==都必须重载operator()运算符==，仿函数与 Lamdba 表达式的作用是一致的。举个例子：
+```c++
+#include <iostream>
+#include <string>
+using namespace std;
+ 
+class Functor
+{
+public:
+    void operator() (const string& str) const
+    {
+        cout << str << endl;
+    }
+};
+ 
+int main()
+{
+    Functor myFunctor;
+    myFunctor("Hello world!");
+    return 0;
+}
+```
+<!--SR:!2022-09-02,5,190!2022-09-07,10,189-->
+
+### 5.  Lamdba表达式适用场景
+?
+STL算法库、短小且不需要复用的、多线程场景、函数指针和function、
+<!--SR:!2022-09-08,11,209-->
+
+#### 5.1 Lamdba表达式应用于[[STL详解及常见面试题#一、STL的介绍|STL算法库]]
+```c++
+// for_each应用实例
+int a[4] = {11, 2, 33, 4};
+sort(a, a+4, [=](int x, int y) -> bool { return x%10 < y%10; } );
+for_each(a, a+4, [=](int x) { cout << x << " ";} );
+
+```
+
+```c++
+// find_if应用实例
+int x = 5;
+int y = 10;
+deque<int> coll = { 1, 3, 19, 5, 13, 7, 11, 2, 17 };
+auto pos = find_if(coll.cbegin(), coll.cend(), [=](int i) {                 
+    return i > x && i < y;
+});
+
+```
+
+```c++
+// remove_if应用实例
+std::vector<int> vec_data = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+int x = 5;
+vec_data.erase(std::remove_if(vec.date.begin(), vec_data.end(), [](int i) { 
+    return n < x;}), vec_data.end());
+
+std::for_each(vec.date.begin(), vec_data.end(), [](int i) { 
+    std::cout << i << std::endl;});
+```
+
+#### 5.2 短小不需要复用函数场景
+```c++
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main(void)
+{
+    int data[6] = { 3, 4, 12, 2, 1, 6 };
+    vector<int> testdata;
+    testdata.insert(testdata.begin(), data, data + 6);
+
+    // 对于比较大小的逻辑，使用lamdba不需要在重新定义一个函数
+    sort(testdata.begin(), testdata.end(), [](int a, int b){ 
+        return a > b; });
+
+    return 0;
+}
+
+```
+
+#### 5.3 Lamdba表达式应用于多线程场景
+[[C++thread | 与 thread 类配合使用]]
+```c++
+#include <iostream>
+#include <thread>
+#include <vector>
+#include <algorithm>
+
+int main()
+{
+    // vector 容器存储线程
+    std::vector<std::thread> workers;
+    for (int i = 0; i < 5; i++) 
+    {
+        workers.push_back(std::thread([]() 
+        {
+            std::cout << "thread function\n";
+        }));
+    }
+    std::cout << "main thread\n";
+
+    // 通过 for_each 循环每一个线程
+    // 第三个参数赋值一个task任务
+    // 符号'[]'会告诉编译器我们正在用一个匿名函数
+    // lambda函数将它的参数作为线程的引用t
+    // 然后一个一个的join
+    std::for_each(workers.begin(), workers.end(), [](std::thread &t;) 
+    {
+        t.join();
+    });
+
+    return 0;
+}
+
+```
+[[C++mutex | 与mutex 类配合使用]]
+```c++
+std::mutex mutex;
+std::condition_variable condition;
+std::queue<std::string> queue_data;
+
+std::thread threadBody([&]{
+	std::unique_lock<std::mutex> lock_log(mutex);
+	condition.wait(lock_log, [&]{
+		return !queue_data.front();
+	});
+	std::cout << "queue data: " << queue_data.front();
+	lock_log.unlock();
+});
+
+queue_data.push("this is my data");
+condition.notity_one();
+
+if(threadBody.joinable())
+{
+	threadBody.join();
+}
+
+```
+
+#### 5.4 Lamdba表达式应用于函数指针与function
+```c++
+#include <iostream>
+#include <functional>
+using namespace std;
+
+int main(void)
+{
+    int x = 8, y = 9;
+    auto add = [](int a, int b) { return a + b; };
+    std::function<int(int, int)> Add = [=](int a, int b) { return a + b; };
+
+    cout << "add: " << add(x, y) << endl;
+    cout << "Add: " << Add(x, y) << endl;
+
+    return 0;
+}
+
+```
+
+#### 5.5 Lamdba表达式作为函数的入参
+```c++
+using FuncCallback = std::function<void(void)>;
+
+void DataCallback(FuncCallback callback)
+{
+	std::cout << "Start FuncCallback!" << std::endl;
+	callback();
+	std::cout << "End FuncCallback!" << std::endl;
+}
+
+auto callback_handler = [&](){
+	std::cout << "This is callback_handler";
+};
+
+DataCallback(callback_handler);
+
+```
+
+#### 5.6 Lamdba表达式在QT中的应用
+```c++
+QTimer *timer=new QTimer;
+timer->start(1000);
+QObject::connect(timer,&QTimer::timeout,[&](){
+        qDebug() << "Lambda表达式";
+});
+
+```
+
+```c++
+int a = 10;
+QString str1 = "汉字博大精深";
+connect(pBtn4, &QPushButton::clicked, [=](bool checked){
+	qDebug() << a <<str1;
+	qDebug() << checked;
+	qDebug() << "Hua Windows Lambda Button";
+});
+
+```
+
+### 6. Lambda 表达式对性能影响的验证
+#### 6.1 实验结论
+使用 Lambda 函数的效率与使用函数对象是一样的，都要快于[[|函数指针]]。他们都能够在编译期将代码[[|内联]]展开，减少函数调用的时间。
+
+#### 6.2 实验设计
+#### 6.3 实验原理分析
+编译器实际上将lambda函数转化为一个函数对象，所以，它与使用函数对象是一样高效的。
+![[C++ Lambda 表达式 详解#4 1 Lambda表达式工作原理]]

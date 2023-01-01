@@ -1,0 +1,150 @@
+{
+  "main": {
+    "id": "12a9c848934ed48f",
+    "type": "split",
+    "children": [
+      {
+        "id": "9458682bbc6e96a9",
+        "type": "leaf",
+        "state": {
+          "type": "graph",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "08ceebad4fe5933a",
+    "type": "split",
+    "children": [
+      {
+        "id": "3ef692821c7190b7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "40050e8cd35c20c5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "ad8e705f1f4aa2aa",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 379.5
+  },
+  "right": {
+    "id": "cfc583a2ab47fdad",
+    "type": "split",
+    "children": [
+      {
+        "id": "df5f12df853c51dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e54aa921285b5ec9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6b3aa5c7246e7f24",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "cf372b3058d5b7c4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b6430e404b418686",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "28bad0122a136f95",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "a665f872568213ab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f3c611c412e1bb2b",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "9458682bbc6e96a9",
+  "lastOpenFiles": [
+    "笔记/-form-  形式，格式，形成 --N.md",
+    "词根词缀/英语后缀.md",
+    "词根词缀/英语词根.md",
+    "单词树/-form-  形式，格式，形成 --T.md",
+    "单词树/-vinc- = -vict- 胜，征服 --T.md",
+    "-vinc- = -vict- 胜，征服.md",
+    "笔记/-vinc- = -vict- 胜，征服 -- N.md",
+    "2022-08-17.md",
+    "词根词缀/英语前缀.md",
+    "词根词缀/词根.md"
+  ]
+}

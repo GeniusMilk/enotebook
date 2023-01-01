@@ -1,0 +1,163 @@
+{
+  "main": {
+    "id": "12a9c848934ed48f",
+    "type": "split",
+    "children": [
+      {
+        "id": "6a909267d1ff6728",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "MyAnki/算法与数据结构/算法与数据结构 Card.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "08ceebad4fe5933a",
+    "type": "split",
+    "children": [
+      {
+        "id": "3ef692821c7190b7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "40050e8cd35c20c5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "ad8e705f1f4aa2aa",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 379.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "cfc583a2ab47fdad",
+    "type": "split",
+    "children": [
+      {
+        "id": "df5f12df853c51dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e54aa921285b5ec9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "MyAnki/算法与数据结构/算法与数据结构 Card.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6b3aa5c7246e7f24",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "MyAnki/算法与数据结构/算法与数据结构 Card.md"
+              }
+            }
+          },
+          {
+            "id": "cf372b3058d5b7c4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "MyAnki/算法与数据结构/算法与数据结构 Card.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b6430e404b418686",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "28bad0122a136f95",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "a665f872568213ab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f3c611c412e1bb2b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MyAnki/C++/C++ Card.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "6a909267d1ff6728",
+  "lastOpenFiles": [
+    "MyAnki/C++/C++ Card.md",
+    "MyAnki/C++/C++的标准库/STL详解及常见面试题.md",
+    "MyAnki/算法与数据结构/算法与数据结构 Card.md",
+    "MyAnki/OS/OS Card.md",
+    "面经整理发布版.md",
+    "MyAnki/计网/计网 Card.md",
+    "MyAnki/Linux/Linux Card.md",
+    "rdlist双链表.md",
+    "ep_poll_callback.md",
+    "MyAnki/DB/DB Card.md"
+  ]
+}

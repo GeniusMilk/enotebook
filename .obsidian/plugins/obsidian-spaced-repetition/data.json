@@ -1,0 +1,53 @@
+{
+  "settings": {
+    "flashcardEasyText": "简单",
+    "flashcardGoodText": "记得",
+    "flashcardHardText": "较难",
+    "flashcardTags": [
+      "#智能指针Card",
+      "#flashcards",
+      "#WorldCard",
+      "#WorldCard后缀",
+      "#WorldCard前缀",
+      "#STLCard",
+      "#OSCard",
+      "#DBCard",
+      "#计网Card",
+      "#DockerCard",
+      "#MySQLCard",
+      "#LambdaCard",
+      "#GDBCard",
+      "#MutexCard"
+    ],
+    "convertFoldersToDecks": false,
+    "cardCommentOnSameLine": false,
+    "burySiblingCards": false,
+    "showContextInCards": true,
+    "flashcardHeightPercentage": 80,
+    "flashcardWidthPercentage": 40,
+    "showFileNameInFileLink": false,
+    "randomizeCardOrder": true,
+    "convertHighlightsToClozes": true,
+    "convertBoldTextToClozes": false,
+    "singlelineCardSeparator": "::",
+    "singlelineReversedCardSeparator": ":::",
+    "multilineCardSeparator": "?",
+    "multilineReversedCardSeparator": "??",
+    "tagsToReview": [
+      "#review"
+    ],
+    "noteFoldersToIgnore": [],
+    "openRandomNote": false,
+    "autoNextNote": false,
+    "disableFileMenuReviewOptions": false,
+    "maxNDaysNotesReviewQueue": 365,
+    "baseEase": 250,
+    "lapsesIntervalChange": 0.5,
+    "easyBonus": 1.3,
+    "maximumInterval": 36525,
+    "maxLinkFactor": 1,
+    "showDebugMessages": false
+  },
+  "buryDate": "2022-08-24",
+  "buryList": []
+}

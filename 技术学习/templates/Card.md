@@ -1,0 +1,56 @@
+#flashcards 
+#八股文
+#Anki
+
+#myanki
+
+```ActivityHistory
+/
+```
+```toc 
+	style: bullet | number | inline (default: bullet) 
+	min_depth: number (default: 2) max_depth: number (default: 6) 
+	title: string (default: undefined) 
+	allow_inconsistent_headings: boolean (default: false) 
+	delimiter: string (default: |) 
+	varied_style: boolean (default: false) 
+```
+
+
+# 数据库
+## 1.关系型数据库非关系型数据库
+### 1.1 关系型数据库
+### 1.1.1 关系型数据库的定义
+### 1.1.2 关系型数据库的优缺点
+
+ 关系型数据库的优点
+?
+  1. 容易理解。因为它采用了关系模型来组织数据。
+  2. 可以保持数据的一致性。
+  3. 数据更新的开销比较小。
+  4. 支持复杂查询（带where子句的查询） <!--SR:!2022-09-03,6,130-->
+
+### 1.2 非关系型数据库
+### 1.2.1 非关系型数据库的定义
+
+定义
+?
+非关系型数据库也叫nosql，采用键值对的形式进行存储。它的读写性能很高，易于扩展。例如Redis,Mongodb,hbase等等。 <!--SR:!2022-09-19,29,228-->
+
+### 1.2.2 非关系型数据库的优缺点
+
+非关系型数据库的优点
+?
+  1. 不需要经过sql层的解析，读写效率高。
+  2. 基于键值对，数据的扩展性很好。
+  3. 可以支持多种类型数据的存储，如图片，文档等等。 <!--SR:!2022-09-02,5,130-->
+
+#### 1.2.3 适合使用非关系型数据库的场景：
+四类场景
+?
+* 日志系统
+* 地理位置存储
+* 数据量巨大
+* 高可用  <!--SR:!2022-09-07,10,150-->
+
+

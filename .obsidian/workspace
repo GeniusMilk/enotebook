@@ -1,0 +1,124 @@
+{
+  "main": {
+    "id": "c5f36c8a75536837",
+    "type": "split",
+    "children": [
+      {
+        "id": "2357e10aded6eab1",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0680e08d07b135e9",
+    "type": "split",
+    "children": [
+      {
+        "id": "23556bd0533f5385",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "91ff5ddc2f3ad8cc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "b5457e6278d3a4be",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "#TODO",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5cb60cf1531e9079",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 396.5021228790283,
+    "collapsed": true
+  },
+  "right": {
+    "id": "b456815cea168dea",
+    "type": "split",
+    "children": [
+      {
+        "id": "ed63d8ca4dddeda8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ac1722b6551a0582",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "byModifiedTime",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "de4fef6269b84b8d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "7b19e87b1f0922f2",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "2357e10aded6eab1",
+  "lastOpenFiles": [
+    "Englishilearning/笔记/8 -script- = -scrib- = -scrip- 写，刻写-- N.md",
+    "Englishilearning/笔记/-vinc- = -vict- 胜，征服 -- N.md",
+    "Englishilearning/笔记/7 -vi- -via- 路 --N.md",
+    "Englishilearning/笔记/-bar- = -bal- = -ban- 长木条，障碍--N.md",
+    "Englishilearning/词根词缀/英语前缀.md",
+    "Englishilearning/笔记/9.-techn(o)- 技术，艺术-- N.md",
+    "Englishilearning/单词树/9.-techn(o)- 技术，艺术 --T.md",
+    "Englishilearning/单词树/-od- 建 造 --T.md",
+    "Englishilearning/单词树/-bar- = -bal- = -ban- 长木条，障碍 --T.md",
+    "Englishilearning/单词树/8 -script- = -scrib- = -scrip- 写，刻写 --T.md"
+  ]
+}
