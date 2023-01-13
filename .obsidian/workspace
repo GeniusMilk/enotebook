@@ -7,8 +7,12 @@
         "id": "2357e10aded6eab1",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "读书笔记/社会学学习/想象的共同体（增订版）/想象的共同体（增订版）/读书笔记--社会学学习--《想象的共同体（增订版）》.md",
+            "mode": "source",
+            "source": true
+          }
         }
       }
     ],
@@ -57,8 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 396.5021228790283,
-    "collapsed": true
+    "width": 100
   },
   "right": {
     "id": "b456815cea168dea",
@@ -74,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "读书笔记/社会学学习/想象的共同体（增订版）/想象的共同体（增订版）/读书笔记--社会学学习--《想象的共同体（增订版）》.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "byModifiedTime",
@@ -89,7 +93,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "读书笔记/社会学学习/想象的共同体（增订版）/想象的共同体（增订版）/读书笔记--社会学学习--《想象的共同体（增订版）》.md"
+              }
             }
           },
           {
@@ -110,6 +116,7 @@
   },
   "active": "2357e10aded6eab1",
   "lastOpenFiles": [
+    "读书笔记/社会学学习/狂热分子/笔记/读书笔记--社会学学习--《狂热分子》.md",
     "Englishilearning/笔记/8 -script- = -scrib- = -scrip- 写，刻写-- N.md",
     "Englishilearning/笔记/-vinc- = -vict- 胜，征服 -- N.md",
     "Englishilearning/笔记/7 -vi- -via- 路 --N.md",
@@ -118,7 +125,6 @@
     "Englishilearning/笔记/9.-techn(o)- 技术，艺术-- N.md",
     "Englishilearning/单词树/9.-techn(o)- 技术，艺术 --T.md",
     "Englishilearning/单词树/-od- 建 造 --T.md",
-    "Englishilearning/单词树/-bar- = -bal- = -ban- 长木条，障碍 --T.md",
-    "Englishilearning/单词树/8 -script- = -scrib- = -scrip- 写，刻写 --T.md"
+    "Englishilearning/单词树/-bar- = -bal- = -ban- 长木条，障碍 --T.md"
   ]
 }

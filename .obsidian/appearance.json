@@ -1,7 +1,6 @@
 {
-  "baseFontSize": 14,
+  "baseFontSize": 17,
   "theme": "obsidian",
   "translucency": false,
-  "monospaceFontFamily": "",
-  "accentColor": ""
+  "monospaceFontFamily": ""
 }
